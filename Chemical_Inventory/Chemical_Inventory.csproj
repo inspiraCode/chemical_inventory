@@ -320,8 +320,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Chemicals.aspx" />
+    <Content Include="WebServices\Catalogs.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ChemicalCRUD.cs" />
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -329,6 +331,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Chemical.cs" />
     <Compile Include="LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,6 +346,14 @@
     </Compile>
     <Compile Include="Chemicals.aspx.designer.cs">
       <DependentUpon>Chemicals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ConnectionManager.cs" />
+    <Compile Include="WebServices\Catalogs.aspx.cs">
+      <DependentUpon>Catalogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebServices\Catalogs.aspx.designer.cs">
+      <DependentUpon>Catalogs.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
