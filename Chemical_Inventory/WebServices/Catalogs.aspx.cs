@@ -4,6 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Chemical_Inventory.DAO;
+using Chemical_Inventory.Entities;
+using Newtonsoft.Json;
 
 namespace Chemical_Inventory.WebServices
 {
@@ -33,18 +36,18 @@ namespace Chemical_Inventory.WebServices
                         }
                     }
                     return;
-                case "create":
-                    if (catalog != null)
-                    {
-                        switch (catalog)
-                        {
-                            case "chemical":
-                                Response.Clear();
-                                Response.Write(createChemical());
-                                Response.End();
-                                return;
+                //case "create":
+                //    if (catalog != null)
+                //    {
+                //        switch (catalog)
+                //        {
+                //            case "chemical":
+                //                Response.Clear();
+                //                Response.Write(createChemical());
+                //                Response.End();
+                //                return;
                            
-                        }
+                //        }
                     }
                     return;
             }
