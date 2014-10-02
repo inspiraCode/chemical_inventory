@@ -27,12 +27,11 @@ namespace Chemical_Inventory.WebServices
                     {
                         switch (catalog)
                         {
-                            case "chemical":
+                            case "chemicals":
                                 Response.Clear();
                                 Response.Write(getChemicals());
                                 Response.End();
                                 return;
-                            
                         }
                     }
                     return;
@@ -46,12 +45,12 @@ namespace Chemical_Inventory.WebServices
                 //                Response.Write(createChemical());
                 //                Response.End();
                 //                return;
-                           
+
                 //        }
-                    }
-                    return;
             }
+            return;
         }
+
         private string getChemicals()
         {
             ChemicalCRUD commodity_CRUD = new ChemicalCRUD();
@@ -92,5 +91,6 @@ namespace Chemical_Inventory.WebServices
         //    response.Result = resultChemical;
         //    return JsonConvert.SerializeObject(response);
         //}
+
     }
 }

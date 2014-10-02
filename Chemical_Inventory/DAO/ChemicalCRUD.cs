@@ -144,6 +144,15 @@ namespace Chemical_Inventory.DAO
             //    recordset.Add(chemical);
             //}
 
+            for (int i = 0; i < 10; i++)
+            {
+                Chemical chemical = new Chemical();
+                chemical.ID = i;
+                chemical.ChemicalName = "Name " + i;
+                chemical.PartNumber = "Part Number " + i;
+                recordset.Add(chemical);
+            }
+
             return recordset;
         }
 
