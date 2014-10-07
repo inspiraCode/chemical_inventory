@@ -18,6 +18,6 @@ namespace Chemical_Inventory.Entities
         public string ProviderFile = "";
         public string Container = "";
         public string Status = "";
-        public DateTime CreateDate = DateTime.Now;
+        public string CreateDate = DateTime.Now.ToString();
     }
 }

@@ -54,6 +54,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Images\delete-icon.png" />
+    <Content Include="Images\edit-icon.png" />
+    <Content Include="Images\excel-icon.png" />
+    <Content Include="Images\folder-icon.png" />
+    <Content Include="Images\loading.gif" />
     <Content Include="LogIn.aspx" />
     <Content Include="scripts\alertify\alertify.bootstrap.css" />
     <Content Include="scripts\alertify\alertify.core.css" />
@@ -317,6 +322,7 @@
     <Content Include="scripts\jQuery\ui\jquery.ui.spinner.min.js" />
     <Content Include="scripts\jQuery\ui\jquery.ui.tabs.min.js" />
     <Content Include="scripts\jQuery\ui\jquery.ui.widget.min.js" />
+    <Content Include="scripts\moment\moment.min.js" />
     <Content Include="scripts\utils\validator.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -364,9 +370,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Demo Files\ExcelFile.xlsx" />
+    <None Include="Demo Files\PDFFile.pdf" />
     <None Include="scripts\dataTable\images\Sorting icons.psd" />
     <None Include="scripts\jQuery\themes\images\Thumbs.db" />
   </ItemGroup>

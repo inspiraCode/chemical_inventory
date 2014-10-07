@@ -144,12 +144,13 @@ namespace Chemical_Inventory.DAO
             //    recordset.Add(chemical);
             //}
 
-            for (int i = 0; i < 10; i++)
+            for (long i = 0; i < 50; i++)
             {
                 Chemical chemical = new Chemical();
                 chemical.ID = i;
                 chemical.ChemicalName = "Name " + i;
                 chemical.PartNumber = "Part Number " + i;
+                chemical.CreateDate = DateTime.Now.AddDays(i).ToString();
                 recordset.Add(chemical);
             }
 

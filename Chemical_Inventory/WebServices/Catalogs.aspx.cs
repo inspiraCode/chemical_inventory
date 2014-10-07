@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Chemical_Inventory.DAO;
 using Chemical_Inventory.Entities;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Chemical_Inventory.WebServices
 {
@@ -35,6 +36,12 @@ namespace Chemical_Inventory.WebServices
                         }
                     }
                     return;
+                case "downloadExcelFile":
+                    downloadExcelFile();
+                return;
+                case "downloadProviderFile":
+                    downloadProviderFile();
+                return;
                 //case "create":
                 //    if (catalog != null)
                 //    {
@@ -57,6 +64,20 @@ namespace Chemical_Inventory.WebServices
             List<Chemical> listChemicals = (List<Chemical>)commodity_CRUD.readAll();
 
             return JsonConvert.SerializeObject(listChemicals);
+        }
+
+        public void downloadExcelFile()
+        {
+            Response.AddHeader("Content-Disposition", "attachment;filename=ExcelSample.xlsx");
+            Response.TransmitFile(ResolveUrl("/Demo Files/ExcelFile.xlsx"));
+            Response.End();
+        }
+
+        public void downloadProviderFile()
+        {
+            Response.AddHeader("Content-Disposition", "attachment;filename=PDFSample.pdf");
+            Response.TransmitFile(ResolveUrl("/Demo Files/PDFFile.pdf"));
+            Response.End();
         }
 
         //public string createChemical()
