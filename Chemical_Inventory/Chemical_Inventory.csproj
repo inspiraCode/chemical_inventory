@@ -60,6 +60,7 @@
     <Content Include="Images\folder-icon.png" />
     <Content Include="Images\loading.gif" />
     <Content Include="LogIn.aspx" />
+    <Content Include="Reports\Chemicals_List.aspx" />
     <Content Include="scripts\alertify\alertify.bootstrap.css" />
     <Content Include="scripts\alertify\alertify.core.css" />
     <Content Include="scripts\alertify\alertify.default.css" />
@@ -358,6 +359,13 @@
     </Compile>
     <Compile Include="Chemicals.aspx.designer.cs">
       <DependentUpon>Chemicals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Chemicals_List.aspx.cs">
+      <DependentUpon>Chemicals_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Chemicals_List.aspx.designer.cs">
+      <DependentUpon>Chemicals_List.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConnectionManager.cs" />
     <Compile Include="WebServices\Catalogs.aspx.cs">

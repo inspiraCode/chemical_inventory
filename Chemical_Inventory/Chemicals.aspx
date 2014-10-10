@@ -200,15 +200,22 @@
     </div>
     <span style="float: right;"><a href="mailto:inspiracode@gmail.com?Subject=From%20Chemicals%20Inventory"
         target="_top">By Inspiracode</a></span> <span class="MainTitle">Chemicals' Inventory</span>
+        <input type="button" value="Print" id="btnPrint" style="float: left;" />
     <div id="divContanier">
     </div>
+    
     <script type="text/javascript">
+        var filteredData = [[]];
         jQuery(function () {
             jQuery(window).resize(function () {
                 centerPleaseWait();
             });
             centerPleaseWait();
             getResources();
+            jQuery("#btnPrint").click(function () {
+                filteredData = $("#tableChemicals").dataTable()._('tr', { "filter": "applied" });
+                window.open("Reports/Chemicals_List.aspx");
+            });
         });
 
         var Chemicals;
